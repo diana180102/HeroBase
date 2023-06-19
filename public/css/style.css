@@ -42,6 +42,7 @@ body{
     overflow: auto;
     scrollbar-width: thin;
     scrollbar-color: var(--color-primary-desaturated-red) var(--color-primary-desaturated-red);
+    -webkit-scrollbar-color: var(--color-primary-desaturated-red) var(--color-primary-desaturated-red);
     min-width: 375px;
     
 }
