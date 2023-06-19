@@ -21,29 +21,29 @@
 body{
     font-family: 'Josefin Sans', sans-serif;
     background:var(--gradiente-white);
-    
-    
-   
+    display: flex;
+    flex-direction: column;
 }
 
 
 .main-container{
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 5rem 375px auto; 
+    grid-template-rows: 5rem 375px auto auto; 
     grid-template-areas: "logo"
                          "hero-image"   
-                         "hero-description";
+                         "hero-description"
+                         "footer";
                          
     width: 100%;
    
     gap: 0px 0px;
     height: 100vh;
-    overflow: auto;
-    scrollbar-width: thin;
-    scrollbar-color: var(--color-primary-desaturated-red) var(--color-primary-desaturated-red);
-    -webkit-scrollbar-color: var(--color-primary-desaturated-red) var(--color-primary-desaturated-red);
+    /* overflow-y: auto;
+    scrollbar-width:thin;
+    scrollbar-color: var(--color-primary-desaturated-red), var(--color-primary-desaturated-red); */
     min-width: 375px;
+    
     
 }
 
@@ -114,7 +114,7 @@ body{
 }
 
 .heading{
-    padding: 5.5rem 3rem 1rem 3rem;
+    padding: 5.5rem 0rem 1rem 0rem;
 }
 
 .heading h1 {
@@ -204,13 +204,23 @@ button .fa-chevron-right{
     margin-top: 10px;
 }
 
+footer{
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+}
+
 
 footer p{
+    
     padding: 10px;
     background-color: var(--color-neutral-grayish-red);
     text-align: center;
     color: var(--color-primary-soft-red);
     font-weight: 400;
+    width: 100%;
 }
 
 footer p span{
@@ -236,7 +246,8 @@ footer p span{
         grid-template-columns : 55% 45%;
         grid-template-rows: 10% 90%;
         grid-template-areas: "logo hero-image"
-                             "hero-description hero-image";
+                             "hero-description hero-image"
+                              "footer footer";
         
      }
 /* LOGO */
@@ -268,6 +279,10 @@ footer p span{
         max-width: 700px;
         margin-top: 70px;
 
+    }
+
+    .heading{
+        padding: 0 3rem;
     }
 
      
